@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .3s linear;
+}
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 7%;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    border-radius: 0.5rem;
+    padding: .5rem 1.5rem;
+}
+.logo{
+    width: 300px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+    padding: 20px 0px;
+
+}
+
+nav ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 250%;
+    border-radius: 2.5rem;
+    padding: .5rem 1.5rem;
+}
+nav ul li a:hover{
+    color:#fff;
+    background: var(--green);
+}
+nav .icon i{
+    cursor: pointer;
+    font-size: 250%;
+    border-radius: 2rem;
+    padding: .5rem 1.5rem;
+}
+nav .icon i:hover{
+    color:#fff;
+    background: var(--green);
+    transform: rotate(180deg);
+}
+nav .icon #menu-bars{
+    display: none;
+}
+
+
+
+section{
+
+    margin-top: 100px;
+    display: inline-block;
+    justify-content: space-evenly;
+}
+section .container{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+section .logo{
+    height: 830px;
+    width: 100%;
+}
+
+section .login{
+    width: 100%;
+    display: block;
+
+}
+
+section .login h3{
+    font-size: 5rem;
+    margin-top:80px;
+    margin-left: 50px;
+    color: var(--green);
+}
+
+section .login p{
+    font-size: 2rem;
+    margin-top:50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    color: var(--light-color);
+}
+
+.log-form{
+    display: flexbox;
+    margin-top:50px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+.log-form input{
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    text-transform: none;
+    font-size: 3rem;
+    background-color: rgb(145, 226, 186);
+    border-radius: 2rem;
+    border-color: #192a56;
+}
+.log-form label{
+    color: var(--green);
+    font-size: 3.5rem;
+    margin-bottom: 1px;
+}
+.log-form button{
+    width: 200px;
+    height: 30px;
+    border-radius: 2rem;
+    margin-left: 0px;
+    margin-top: 50px;
+    transform: scale(170%);
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--green);
+    cursor: pointer;
+
+}
+
+.log-form button:hover{
+    background: var(--black);
+    transform: scale(180%);
+}
+.btn{
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 2rem;
+    margin-left: 50px;
+    margin-top: 20px;
+    transform: scale(170%);
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--green);
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--black);
+    transform: scale(180%);
+}
+
+
+
+footer{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    bottom: 0;
+    background-color:  var(--green);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding-top: 20px;
+    font-size: 120%;
+
+}
+.footlogo{
+    width: 55%;
+    height: 55%;
+    margin-top: -20px;
+    margin-left: -40px;
+
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.col h3{
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+}
+.mail{
+    width: fit-content;
+    border-bottom: 1px solid var( --black);
+    margin: 10px 0;
+}
+
+ul li{
+    list-style: none;
+
+}
+footer ul li{
+    text-decoration: none;
+    color: var(--black);
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    width: fit-content;
+    margin: 2px;
+}
+
+footer ul li:hover{
+    background-color:  var(--black);
+    color: ivory;
+}
+
+footer .col i{
+    transform: scale(220%);
+    padding: 12px;
+}
+.logoPara{
+    margin-top: -30px;
+}
+
+

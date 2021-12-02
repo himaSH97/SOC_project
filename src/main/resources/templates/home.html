@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--font awsome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--css file link-->
+    <link th:href="@{/home.css}" rel="stylesheet" >
+    <!--swiper cdn-->
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+
+</head>
+<body>
+<!--strting header section-->
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="../static/infinity.png"
+                 th:src="@{infinity.png}"/>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a th:href="@{/new_reservation}">Reservation</a></li>
+                <li><a th:href="@{/product_list}">Order now</a></li>
+                <li><a href="#foot" >Contact us</a></li>
+            </ul>
+            <div class="icon"><i class="fas fa-bars" id="menu-bars"></i></div>
+        </nav>
+        
+    </header>
+<!--ending header section-->
+
+
+<!--strting home section-->
+    <section class="home" id="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Order our signature dishes</span>
+                        <h3>Join infinity club</h3>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Nullam 
+                            et tincidunt enim, sed hendrerit elit. </p>
+                        <a th:href="@{/product_list}" class="btn">Order now</a>
+                    </div>
+                    <div class="image">
+                        <img src="../static/hallway.jpg"
+                             th:src="@{hallway.jpg}"/>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Make Reservations online</span>
+                        <h3>for your stays</h3>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Nullam 
+                            et tincidunt enim, sed hendrerit elit. </p>
+                        <a th:href="@{/new_reservation}" class="btn">Reservations</a>
+                    </div>
+                    <div class="image">
+                        <img src="../static/room.jpg"
+                             th:src="@{room.jpg}"/>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Looking for something else </span>
+                        <h3>contact us</h3>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Nullam 
+                            et tincidunt enim, sed hendrerit elit. </p>
+                        <a href="#foot" class="btn">contact us</a>
+                    </div>
+                    <div class="image">
+                        <img src="../static/dine.jpg"
+                             th:src="@{dine.jpg}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+    </section>
+<!--ending home section-->
+<section class="mid" id="mid">
+    <div>
+        <h3>Lorem Ipsum</h3>
+        <p class="p1">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a g
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a g
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a g
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a g
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a g
+
+        </p>
+        <p class="p2">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a g
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a g
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a g
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a g
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a g
+
+        </p>
+    </div>
+
+
+</section>
+<!--starting  footer section-->
+<footer class="foot" id="foot">
+    <div class="row">
+        <div class="col">
+            <h3>Social Media</h3>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="col">
+            <h3>Address</h3>
+            <p>Infinity Hotels,</p>
+            <p>street adress,</p>
+            <p>colombo,</p>
+            <p>Sri lanka.</p>
+            <p class="mail">infinityhotels@mail.com</p>
+            <h4>+94 - 123456789</h4>
+        </div>
+
+        <div class="col">
+            <h3>Links</h3>
+            <ul>
+                <li><a href=""></a>Home</li>
+                <li><a href=""></a>reservation</li>
+                <li><a href=""></a>order food</li>
+                <li><a href=""></a>contact us</li>
+            </ul>
+        </div>
+        <div class="col">
+            <img class="footlogo" src="../static/infinity.png"
+                 th:src="@{infinity.png}"/>
+
+            <p class="logoPara">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book </p>
+        </div>
+    </div>
+</footer>
+
+<!--ending footer section-->
+
+
+
+
+
+
+
+
+
+
+
+<!--js file link-->
+<script src="js/script.js"></script>
+<!--swiper js-->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script>var swiper = new Swiper(".home-slider", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop:true,
+   observer: true,  
+   observeParents: true,
+  });</script>
+
+</body>
+</html>

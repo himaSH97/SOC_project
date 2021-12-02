@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--css file link-->
+    <link th:href="@{/users.css}" rel="stylesheet" >
+</head>
+<body>
+<!--strting header section-->
+<header>
+    <nav class="navbar">
+        <img class="logo" src="../static/infinity.png"
+             th:src="@{infinity.png}"/>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a href="#users">Users</a></li>
+            <li><a href="#res">Reservation</a></li>
+            <li><a href="#product-section">Products</a></li>
+            <li><a href="#foot">Contact Info</a></li>
+        </ul>
+        <div class="icon"><i class="fas fa-bars" id="menu-bars"></i></div>
+    </nav>
+
+</header>
+<!--ending header section-->
+
+<section  id="users">
+    <h4>Welcome Admin  <span class="">[[${#request.remoteUser}]]</span></h4>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="logout">
+    </form>
+    <h2>List of Users</h2>
+    <a th:href="@{/new}" class = "btn1">new User</a>
+    <table class="content-table">
+
+        <thead>
+        <tr>
+            <th>firstName</th>
+            <th>lastNames</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="myTable">
+        <tr th:each="user : ${listUser}">
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.roles}"></td>
+            <td>
+
+                <a th:href="@{/delete/{id} (id=${user.id})}" class="btn btn-primary">DELETE</a>
+                <a th:href="@{/update/{id} (id=${user.email})}" class="btn btn-primary">UPDATE</a>
+            </td>
+            <!--<td>
+                <a th:href="@(/delete/{id} )" class="btn_btn-primary"></a>
+                <a th:href="@('/delete/{mail}'(mail=$(customer.email)))" class="btn_btn-primary"></a>
+            </td>-->
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+
+
+    <section class="res" id="res">
+        <h2 class="pr">List of Reservations</h2>
+        <a th:href="@{/new_reservation}" class = "btn1">new Reservation</a>
+        <table class="content-table">
+
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number of persons</th>
+                <th>Number of rooms</th>
+                <th>Days of stay</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="myTable">
+            <tr th:each="reservation : ${listreservation}">
+                <td th:text="${reservation.name}"></td>
+                <td th:text="${reservation.numberOfPersons}"></td>
+                <td th:text="${reservation.numberOfRooms}"></td>
+                <td th:text="${reservation.days}"></td>
+                <td th:text="${reservation.description}"></td>
+                <td>
+
+                    <a th:href="@{/delete_reservation/{id} (id=${reservation.name})}" class="btn btn-primary">DELETE</a>
+
+                </td>
+                <!--<td>
+                    <a th:href="@(/delete/{id} )" class="btn_btn-primary"></a>
+                    <a th:href="@('/delete/{mail}'(mail=$(customer.email)))" class="btn_btn-primary"></a>
+                </td>
+
+                <td th:text="${reservation.name}"></td>
+                <td th:text="${reservation.numberOfPersons}"></td>
+                <td th:text="${reservation.numberOfRooms}"></td>
+                <td th:text="${reservation.days}"></td>
+                <td th:text="${reservation.description}"></td>
+                <td>
+
+                    <a th:href="@{/delete_reservation/{id} (id=${reservation.id})}" class="btn btn-primary">DELETE</a>
+
+                </td>
+
+
+                -->
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+    <section class="product-section" id="product-section">
+        <h2 class="pr">List of products</h2>
+        <a th:href="@{/newproduct}" class = "btn1">new Product</a>
+        <table class="content-table">
+
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>price</th>
+                <th>description</th>
+                <th>Image URL</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="myTable">
+            <tr th:each="product : ${listProduct}">
+
+                <td th:text="${product.name}"></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.description}"></td>
+
+                <td ></td>
+                <td>
+
+                    <a th:href="@{/deleteproduct/{id} (id=${product.name})}" class="btn btn-primary">DELETE</a>
+                    <a th:href="@{/update_product/{id} (id=${product.name})}" class="btn btn-primary">UPDATE</a>
+                </td>
+                <!--<td>
+                    <a th:href="@(/delete/{id} )" class="btn_btn-primary"></a>
+                    <a th:href="@('/delete/{mail}'(mail=$(customer.email)))" class="btn_btn-primary"></a>
+                </td>-->
+            </tr>
+            </tbody>
+        </table>
+
+
+    </section>
+
+<!--starting  footer section-->
+<footer class="foot" id="foot">
+    <div class="row">
+        <div class="col">
+            <h3>Social Media</h3>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="col">
+            <h3>Address</h3>
+            <p>Infinity Hotels,</p>
+            <p>street adress,</p>
+            <p>colombo,</p>
+            <p>Sri lanka.</p>
+            <p class="mail">infinityhotels@mail.com</p>
+            <h4>+94 - 123456789</h4>
+        </div>
+
+        <div class="col">
+            <h3>Links</h3>
+            <ul>
+                <li><a href=""></a>Home</li>
+                <li><a href=""></a>reservation</li>
+                <li><a href=""></a>order food</li>
+                <li><a href=""></a>contact us</li>
+            </ul>
+        </div>
+        <div class="col">
+            <img class="footlogo" src="../static/infinity.png"
+                 th:src="@{infinity.png}"/>
+
+            <p class="logoPara">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book </p>
+        </div>
+    </div>
+</footer>
+
+<!--ending footer section-->
+
+</body>
+</html>
