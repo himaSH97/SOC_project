@@ -24,4 +24,17 @@ public class EmailService {
 
         return "Mail sent successfully";
     }
+
+    public String sendBillEmail(String  mail,String price,String name) {
+        SimpleMailMessage massage = new SimpleMailMessage();
+
+        massage.setFrom("himash946@gmail.com");
+        massage.setTo(mail);
+        massage.setSubject("Order Details");
+        massage.setText("You Have Ordered:  "+name+"\nYour Order Price Rs. "+ price);
+
+        javaMailSender.send(massage);
+
+        return "Mail sent successfully";
+    }
 }

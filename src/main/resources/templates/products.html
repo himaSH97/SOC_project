@@ -53,19 +53,20 @@
             <div>
                 <h2>Rs <span th:text="${product.price}"></span></h2>
                 <h2><span th:text="${product.description}"></span></h2>
-                <a th:href="@{/sendEmail/{id} (id=${#request.remoteUser})}" class="btn">Order</a>
+                <!---  <a th:href="@{/sendEmail/{id} (id=${#request.remoteUser})}" class="btn">Order</a>-->
+                   <a th:href="@{/sendBillEmail/{id}/{price}/{name} (id=${#request.remoteUser},price = ${product.price} ,name = ${product.name}) }" class="btn">Order</a>
 
 
+                </div>
             </div>
         </div>
-    </div>
-    </tr>
-    </table>
+        </tr>
+        </table>
 
-</section>
+    </section>
 
 
-<!--ending product section-->
+    <!--ending product section-->
 
 <!--starting  footer section-->
 <footer class="foot" id="foot">

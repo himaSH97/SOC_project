@@ -22,7 +22,13 @@ public class EmailController {
     } */
     @GetMapping("/sendEmail/{id}")
     public String sendEmail(@PathVariable("id") String id) {
-       // emailService.sendEmail(id);
+        emailService.sendEmail(id);
         return "thank";
     }
+    @GetMapping("/sendBillEmail/{id}/{price}/{name}")
+    public String sendBillEmail(@PathVariable("id") String id ,@PathVariable("price") String price,@PathVariable("name") String name) {
+        emailService.sendBillEmail(id,price,name);
+        return "thank";
+    }
+
 }
